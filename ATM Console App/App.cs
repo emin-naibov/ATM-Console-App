@@ -15,6 +15,18 @@ namespace ATM_Console_App
         static string[] AddMenu { get; set; } = { "Add Azn", "Add Usd", "Add Eur" };
         static string[] CurrencyMenu { get; set; } = { "AZN", "USD", "EUR" };
 
+
+        public static int CardCheck(long card_num)
+        {
+            for (int i = 0; i < accounts.Count; i++)
+            {
+                if (card_num == accounts[i].CardNum)
+                {
+                    return i;
+                }
+            }
+            return -1;
+        }
         static void GetAccs()
         {
             try
