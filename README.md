@@ -1,7 +1,7 @@
 # ATM-Console-App
 
 ## General Info
-Еhis project emulates an ATM, made as a practice and repetition of the main components of c# and in general object-oriented programming
+This project emulates an ATM, made as a practice and repetition of the main components of c# and in general object-oriented programming
 
 
 ## Technologies
