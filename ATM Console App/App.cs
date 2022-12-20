@@ -41,6 +41,17 @@ namespace ATM_Console_App
                 Environment.Exit(-1);
             }
         }
+        public static bool PinCheck(int id, int pin)
+        {
+            if (accounts[id].Pin == pin)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
         static void UpdateAccs()
         {
             try
