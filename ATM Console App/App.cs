@@ -15,6 +15,18 @@ namespace ATM_Console_App
         static string[] AddMenu { get; set; } = { "Add Azn", "Add Usd", "Add Eur" };
         static string[] CurrencyMenu { get; set; } = { "AZN", "USD", "EUR" };
 
+
+        public static int CardCheck(long card_num)
+        {
+            for (int i = 0; i < accounts.Count; i++)
+            {
+                if (card_num == accounts[i].CardNum)
+                {
+                    return i;
+                }
+            }
+            return -1;
+        }
         static void GetAccs()
         {
             try
@@ -27,6 +39,17 @@ namespace ATM_Console_App
                 Console.WriteLine("Cant upload data from your file!");
                 Thread.Sleep(5000);
                 Environment.Exit(-1);
+            }
+        }
+        public static bool PinCheck(int id, int pin)
+        {
+            if (accounts[id].Pin == pin)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
             }
         }
         static void UpdateAccs()
