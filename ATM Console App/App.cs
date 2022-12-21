@@ -49,6 +49,7 @@ namespace ATM_Console_App
             Console.WriteLine();
             Console.WriteLine();
             int selected_index = Interface.MenuNavigation(Operations_Menu, 0, 4);
+
         }
 
         public static bool PinCheck(int id, int pin)
@@ -72,6 +73,25 @@ namespace ATM_Console_App
             catch (Exception)
             {
                 Console.WriteLine("Cant update changed data to your file!"); ;
+            }
+        }
+
+        public static void BalanceAdd(int index, double azn_amount)
+        {
+            if (accounts[index].Currency == "AZN")
+            {
+                accounts[index].Balance += azn_amount;
+            }
+            else if (accounts[index].Currency == "USD")
+            {
+                double result_amount = AznMoneyOperations.MoneyFromAzn(1, azn_amount);
+                accounts[index].Balance += result_amount;
+
+            }
+            else
+            {
+                double result_amount = AznMoneyOperations.MoneyFromAzn(2, azn_amount);
+                accounts[index].Balance += result_amount;
             }
         }
     }
