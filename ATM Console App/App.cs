@@ -41,16 +41,26 @@ namespace ATM_Console_App
                 Environment.Exit(-1);
             }
         }
+        public static void AccountView(int index)
+        {
+            Console.Clear();
+            Console.WriteLine($"Hello, {accounts[index].FullName}");
+            Console.WriteLine($"Your balance is: {accounts[index].Balance} {accounts[index].Currency}");
+            Console.WriteLine();
+            Console.WriteLine();
+            int selected_index = Interface.MenuNavigation(Operations_Menu, 0, 4);
+        }
+
         public static bool PinCheck(int id, int pin)
         {
-            if (accounts[id].Pin == pin)
-            {
+              if (accounts[id].Pin == pin)
+              {
                 return true;
-            }
-            else
-            {
+              }
+              else
+              {
                 return false;
-            }
+              }
         }
         static void UpdateAccs()
         {
