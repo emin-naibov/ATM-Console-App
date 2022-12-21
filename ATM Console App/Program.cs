@@ -8,6 +8,7 @@ namespace ATM_Console_App
         {
             Console.WriteLine("Hello World!");
             Console.WriteLine("Hello from Squash");
+            Console.WriteLine("Hello from Emin");
         }
     }
 }
