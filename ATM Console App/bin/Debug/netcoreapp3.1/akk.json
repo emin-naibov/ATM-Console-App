@@ -1,0 +1,23 @@
+[
+    {
+        "CardNum": 1234567812345678,
+        "Pin": 1234,
+        "FullName": "Emin Naibov",
+        "Balance": 7000,
+        "Currency": "AZN"
+    },
+    {
+        "CardNum": 2345678912345678,
+        "Pin": 2345,
+        "FullName": "Zehra Abdullazade",
+        "Balance": 9000,
+        "Currency": "EUR"
+    },
+    {
+        "CardNum": 3456789123456789,
+        "Pin": 3456,
+        "FullName": "Ceyhun Shamilov",
+        "Balance": 7000,
+        "Currency": "USD"
+    }
+]
